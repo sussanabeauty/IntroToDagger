@@ -3,6 +3,7 @@ package org.sussanacode.daggerapplication.di.component
 import dagger.Component
 import org.sussanacode.daggerapplication.MainActivity
 import org.sussanacode.daggerapplication.di.module.AppModule
+import org.sussanacode.daggerapplication.model.RemoteDataSource
 
 //tell dagger to use dependency from respective module and inject to activity
 
@@ -10,5 +11,7 @@ import org.sussanacode.daggerapplication.di.module.AppModule
 interface AppComponent {
 
     fun inject(mainActivity: MainActivity){}
+
+    fun inject(remoteDataSource: RemoteDataSource){}
 
 }
